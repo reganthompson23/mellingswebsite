@@ -167,22 +167,53 @@ export default function Home() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Project cards - using placeholder boxes for now */}
-            {[1, 2, 3].map((_, index) => (
+            {[
+              {
+                title: "Heritage Queenslander Revival",
+                description: "Complete exterior restoration of a classic Queenslander home in Brisbane, bringing back its original charm while adding modern protection.",
+                image: "https://media.istockphoto.com/id/157329407/photo/house-painter.jpg?s=1024x1024&w=is&k=20&c=xRaLCGnE1u-4Z7h_DUZa7CYyfgKkRHouWnwg1Vq6_Yo="
+              },
+              {
+                title: "Modern Office Transformation",
+                description: "After-hours commercial project transforming a 500sqm office space with a contemporary color scheme and premium finishes.",
+                image: "https://media.istockphoto.com/id/157329407/photo/house-painter.jpg?s=1024x1024&w=is&k=20&c=xRaLCGnE1u-4Z7h_DUZa7CYyfgKkRHouWnwg1Vq6_Yo="
+              },
+              {
+                title: "Coastal Home Refresh",
+                description: "Full interior and exterior painting of a beachfront property, using specialized marine-grade coatings for lasting protection.",
+                image: "https://media.istockphoto.com/id/157329407/photo/house-painter.jpg?s=1024x1024&w=is&k=20&c=xRaLCGnE1u-4Z7h_DUZa7CYyfgKkRHouWnwg1Vq6_Yo="
+              }
+            ].map((project, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-lg overflow-hidden shadow-md"
+                className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="aspect-w-16 aspect-h-9 bg-gray-200" />
+                <div className="aspect-w-16 aspect-h-9 relative">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="object-cover w-full h-full"
+                  />
+                  <div className="absolute inset-0 bg-black/10"></div>
+                </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Project {index + 1}</h3>
+                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                   <p className="text-gray-600">
-                    Description of the project will go here. You can replace this with actual project details.
+                    {project.description}
                   </p>
+                  <Link 
+                    to="/gallery" 
+                    className="inline-flex items-center mt-4 text-primary-600 hover:text-primary-500"
+                  >
+                    View Details
+                    <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </Link>
                 </div>
               </motion.div>
             ))}
