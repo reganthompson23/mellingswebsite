@@ -54,7 +54,7 @@ export default function About() {
           <div 
             className="absolute inset-0 opacity-75"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop')`,
+              backgroundImage: `url('https://media.istockphoto.com/id/1213883647/photo/efficient-renovation-crew-painting-white-walls-of-new-build-home.jpg?s=1024x1024&w=is&k=20&c=YjK90SKh4x0wJX_kdn-9dqMH3Ec7HBo0GwyE2zu_sqM=')`,
               backgroundPosition: 'center',
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
