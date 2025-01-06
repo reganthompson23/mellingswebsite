@@ -47,8 +47,18 @@ export default function About() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gray-900 text-white py-24 sm:py-32">
-        <div className="container">
+      <section className="relative bg-gray-900 text-white py-24 sm:py-32">
+        {/* Background image with overlay */}
+        <div className="absolute inset-0">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: `url('https://media.istockphoto.com/id/1213883647/photo/efficient-renovation-crew-painting-white-walls-of-new-build-home.jpg?s=1024x1024&w=is&k=20&c=YjK90SKh4x0wJX_kdn-9dqMH3Ec7HBo0GwyE2zu_sqM=')`,
+            }}
+          />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="relative container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -56,11 +66,10 @@ export default function About() {
             className="max-w-3xl"
           >
             <h1 className="heading-1 mb-6">
-              Our Story of Excellence in Painting
+              About Mellings
             </h1>
-            <p className="text-xl text-gray-300">
-              For over two decades, we've been bringing color and life to homes and businesses 
-              in our community. Our journey is built on trust, quality, and craftsmanship.
+            <p className="text-xl text-gray-100">
+              Crafting beautiful spaces with precision and care.
             </p>
           </motion.div>
         </div>
@@ -76,20 +85,16 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="heading-2 mb-6">Our History</h2>
-              <div className="space-y-4 text-gray-600">
-                <p>
-                  Founded in 2000, our painting company began with a simple mission: 
-                  to provide exceptional painting services with unmatched attention to detail.
+              <h2 className="heading-2 mb-6">Our Commitment</h2>
+              <div className="space-y-6 text-gray-600">
+                <p className="text-lg leading-relaxed">
+                  At Mellings, we've built our reputation on three fundamental principles: quality, service, and expertise. As a proud family-owned business serving Brisbane, we understand that every project is more than just a job – it's an opportunity to transform your space into something extraordinary.
                 </p>
-                <p>
-                  What started as a small team of dedicated painters has grown into a 
-                  full-service painting company, serving both residential and commercial clients.
+                <p className="text-lg leading-relaxed">
+                  What sets us apart is our deeply personal approach to every project. We believe in putting ourselves in our clients' shoes, delivering the same level of care and attention to detail that we would expect for our own homes. This empathetic approach, combined with our technical expertise, ensures that every project receives the dedication it deserves.
                 </p>
-                <p>
-                  Today, we're proud to be one of the most trusted names in painting, 
-                  known for our professional approach, skilled craftsmanship, and commitment 
-                  to customer satisfaction.
+                <p className="text-lg leading-relaxed">
+                  Whether it's a residential makeover or a commercial transformation, our commitment remains unwavering: to provide exceptional results tailored precisely to your needs, executed with the utmost care and precision.
                 </p>
               </div>
             </motion.div>
@@ -98,9 +103,13 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg"
+              className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden"
             >
-              {/* Placeholder for company history image */}
+              <img
+                src="https://media.istockphoto.com/id/1394988455/photo/painter-with-protective-gloves-painting-with-paint-roller-white-color-on-the-wall.jpg?s=1024x1024&w=is&k=20&c=q-OS3SBgYx_DPcMZGaLJ_cph-U6-W9QDRUxPcLAaJ0Y="
+                alt="Professional painter at work"
+                className="object-cover w-full h-full"
+              />
             </motion.div>
           </div>
         </div>
