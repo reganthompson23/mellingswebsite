@@ -176,12 +176,12 @@ export default function Home() {
               {
                 title: "Modern Office Transformation",
                 description: "After-hours commercial project transforming a 500sqm office space with a contemporary color scheme and premium finishes.",
-                image: "https://media.istockphoto.com/id/157329407/photo/house-painter.jpg?s=1024x1024&w=is&k=20&c=xRaLCGnE1u-4Z7h_DUZa7CYyfgKkRHouWnwg1Vq6_Yo="
+                image: "https://media.istockphoto.com/id/1035101190/photo/renovating-office.jpg?s=1024x1024&w=is&k=20&c=QP1ltjuvL7P8AmH84rdDrwvYcdJtZlpr1_v-9tuOr9c="
               },
               {
                 title: "Coastal Home Refresh",
                 description: "Full interior and exterior painting of a beachfront property, using specialized marine-grade coatings for lasting protection.",
-                image: "https://media.istockphoto.com/id/157329407/photo/house-painter.jpg?s=1024x1024&w=is&k=20&c=xRaLCGnE1u-4Z7h_DUZa7CYyfgKkRHouWnwg1Vq6_Yo="
+                image: "https://media.istockphoto.com/id/186529926/photo/beach-house.jpg?s=1024x1024&w=is&k=20&c=ClUin0-TXfhY-B4jBy1LXb_ToHhplznk6acvbpA_hgM="
               }
             ].map((project, index) => (
               <motion.div
