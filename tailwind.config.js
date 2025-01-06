@@ -39,8 +39,31 @@ export default {
       spacing: {
         '128': '32rem',
       },
+      textShadow: {
+        sm: '0 1px 2px rgba(0, 0, 0, 0.25)',
+        DEFAULT: '0 2px 4px rgba(0, 0, 0, 0.25)',
+        lg: '0 8px 16px rgba(0, 0, 0, 0.25)',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.text-shadow-sm': {
+          textShadow: '0 1px 2px rgba(0, 0, 0, 0.25)',
+        },
+        '.text-shadow': {
+          textShadow: '0 2px 4px rgba(0, 0, 0, 0.25)',
+        },
+        '.text-shadow-lg': {
+          textShadow: '0 8px 16px rgba(0, 0, 0, 0.25)',
+        },
+        '.text-shadow-none': {
+          textShadow: 'none',
+        },
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 }
 

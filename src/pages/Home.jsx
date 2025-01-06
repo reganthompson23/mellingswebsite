@@ -48,7 +48,7 @@ export default function Home() {
       <section className="relative bg-gray-900 text-white">
         {/* Background image */}
         <div 
-          className="absolute inset-0 bg-black/40" 
+          className="absolute inset-0 bg-black/60" 
           style={{
             backgroundImage: `url('https://media.istockphoto.com/id/1221306297/photo/man-pours-paint-into-the-tray-and-dips-roller-professional-interior-construction-worker.jpg?s=1024x1024&w=is&k=20&c=dr5J47iopHLq5-0MDwyE0wxkal8NK-EgCTv_slxwtWk=')`,
             backgroundPosition: 'center',
@@ -64,10 +64,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h1 className="heading-1 mb-6">
+            <h1 className="heading-1 mb-6 text-shadow-sm">
               Transform Your Space with Professional Painting Services
             </h1>
-            <p className="text-xl mb-8 text-gray-200">
+            <p className="text-xl mb-8 text-white text-shadow-sm">
               We bring color to life with expert interior and exterior painting services. 
               Quality workmanship, attention to detail, and customer satisfaction guaranteed.
             </p>
