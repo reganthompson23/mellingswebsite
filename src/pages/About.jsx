@@ -47,28 +47,37 @@ export default function About() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white py-24 sm:py-32">
-        {/* Background image with overlay */}
+      <section className="relative bg-gray-900 text-white">
+        {/* Background image with multiple overlays */}
         <div className="absolute inset-0">
+          {/* Base image with initial overlay */}
           <div 
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 opacity-75"
             style={{
               backgroundImage: `url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop')`,
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              filter: 'brightness(0.85)',
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/50 to-black/60" />
+          {/* Additional gradient overlay */}
+          <div 
+            className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/40 to-black/50"
+          />
         </div>
-        <div className="relative container">
+        
+        <div className="relative container py-32 sm:py-40">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h1 className="heading-1 mb-6 text-white whitespace-nowrap">
+            <h1 className="heading-1 mb-6 text-shadow-lg font-display text-blue-50">
               About Mellings
             </h1>
-            <p className="text-xl text-gray-100 font-medium">
+            <p className="text-xl mb-8 text-gray-100 text-shadow-sm font-medium">
               Crafting beautiful spaces with precision and care.
             </p>
           </motion.div>
