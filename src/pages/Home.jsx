@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import ContactSection from '../components/sections/ContactSection';
+import { Link } from 'react-router-dom';
 
 const features = [
   {
@@ -63,12 +64,12 @@ export default function Home() {
               Quality workmanship, attention to detail, and customer satisfaction guaranteed.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="/contact" className="btn">
+              <Link to="/contact" className="btn">
                 Get Free Quote
-              </a>
-              <a href="/services" className="btn-secondary">
+              </Link>
+              <Link to="/services" className="btn btn-secondary">
                 Our Services
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>

@@ -59,16 +59,16 @@ export default function ContactSection() {
 
   return (
     <section className="bg-gray-50 py-16 sm:py-24">
-      <div className="container">
+      <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="max-w-2xl mx-auto text-center"
+          className="text-center"
         >
           <h2 className="heading-2 mb-4">Get Your Free Quote Today</h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-lg text-gray-600 mb-12">
             Transform your space with our professional painting services. Contact us now for a free, no-obligation quote.
           </p>
         </motion.div>
@@ -78,11 +78,11 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="max-w-xl mx-auto mt-12"
+          className="bg-white rounded-xl shadow-lg p-8 md:p-12"
         >
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-              <div>
+          <form onSubmit={handleSubmit} className="space-y-8">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+              <div className="space-y-2">
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                   Name
                 </label>
@@ -93,10 +93,11 @@ export default function ContactSection() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition duration-150"
+                  placeholder="Your name"
                 />
               </div>
-              <div>
+              <div className="space-y-2">
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                   Email
                 </label>
@@ -107,13 +108,14 @@ export default function ContactSection() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition duration-150"
+                  placeholder="your.email@example.com"
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-              <div>
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+              <div className="space-y-2">
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
                   Phone
                 </label>
@@ -124,10 +126,11 @@ export default function ContactSection() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition duration-150"
+                  placeholder="(555) 123-4567"
                 />
               </div>
-              <div>
+              <div className="space-y-2">
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700">
                   Service Interested In
                 </label>
@@ -136,7 +139,7 @@ export default function ContactSection() {
                   id="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition duration-150 bg-white"
                 >
                   <option>Interior Painting</option>
                   <option>Exterior Painting</option>
@@ -147,7 +150,7 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div>
+            <div className="space-y-2">
               <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                 Message
               </label>
@@ -158,7 +161,7 @@ export default function ContactSection() {
                 required
                 value={formData.message}
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition duration-150"
                 placeholder="Tell us about your project..."
               />
             </div>
@@ -166,7 +169,7 @@ export default function ContactSection() {
             <div>
               <button
                 type="submit"
-                className="w-full btn"
+                className="w-full py-4 px-6 text-base font-medium rounded-lg text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition duration-150"
                 disabled={status.type === 'loading'}
               >
                 {status.type === 'loading' ? 'Sending...' : 'Get Your Free Quote'}
@@ -174,17 +177,19 @@ export default function ContactSection() {
             </div>
 
             {status.message && (
-              <div
-                className={`mt-4 p-4 rounded-md ${
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={`p-4 rounded-lg ${
                   status.type === 'success'
-                    ? 'bg-green-50 text-green-800'
+                    ? 'bg-green-50 text-green-800 border border-green-200'
                     : status.type === 'error'
-                    ? 'bg-red-50 text-red-800'
-                    : 'bg-gray-50 text-gray-800'
+                    ? 'bg-red-50 text-red-800 border border-red-200'
+                    : 'bg-gray-50 text-gray-800 border border-gray-200'
                 }`}
               >
                 {status.message}
-              </div>
+              </motion.div>
             )}
           </form>
         </motion.div>
