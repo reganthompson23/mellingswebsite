@@ -72,10 +72,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h1 className="heading-1 mb-6 text-shadow">
+            <h1 className="heading-1 mb-6 text-shadow-lg font-display text-blue-50">
               Transform Your Space with Professional Painting Services
             </h1>
-            <p className="text-xl mb-8 text-white text-shadow">
+            <p className="text-xl mb-8 text-gray-100 text-shadow-sm font-medium">
               We bring color to life with expert interior and exterior painting services. 
               Quality workmanship, attention to detail, and customer satisfaction guaranteed.
             </p>
