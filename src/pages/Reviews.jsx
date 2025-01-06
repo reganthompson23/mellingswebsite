@@ -4,51 +4,31 @@ import ContactSection from '../components/sections/ContactSection';
 const reviews = [
   {
     id: 1,
-    name: 'Sarah Thompson',
-    location: 'Local Homeowner',
+    name: 'David C.',
+    date: 'December, 2023',
     rating: 5,
-    review: 'Absolutely amazing work! They transformed our entire home with their professional painting services. The attention to detail was impressive, and the team was courteous and clean.',
-    project: 'Interior Home Painting',
+    review: 'Couldn\'t be happier with the professionalism displayed by Shane. He was quick to provide a detailed quote, not only did he answer my many questions with ease he was also very reliable throughout the entire process. Our cafe has never looked better!',
   },
   {
     id: 2,
-    name: 'Michael Rodriguez',
-    location: 'Business Owner',
+    name: 'Sariah P.',
+    date: 'February, 2024',
     rating: 5,
-    review: 'Outstanding commercial painting service. They worked after hours to minimize disruption to our business and completed the project ahead of schedule. Highly recommend!',
-    project: 'Office Space Renovation',
+    review: 'Highly impressed with the customer service. Shane and his team delivered on their promise of a quote within 24 hours and were quick to address a minor issue after completion. We will be recommending for all future works.',
   },
   {
     id: 3,
-    name: 'Emily Chen',
-    location: 'Homeowner',
+    name: 'Michael J.',
+    date: 'November, 2023',
     rating: 5,
-    review: 'The team did an excellent job painting our exterior. They were professional, punctual, and the quality of work exceeded our expectations. Our house looks brand new!',
-    project: 'Exterior House Painting',
+    review: 'I am an out of State investor and needed my property painted and a few handyman items attended to whilst in-between tenants. My property manager recommended Melling\'s services. I flew down before the new tenants were due to move in to inspect my property and I was extremely impressed with not only the painting but the repairs around the property. Thanks Team, great work.',
   },
   {
     id: 4,
-    name: 'David Wilson',
-    location: 'Restaurant Owner',
+    name: 'Judith G.',
+    date: 'February, 2024',
     rating: 5,
-    review: 'Great experience working with this team. They understood our vision and executed it perfectly. The new paint job has completely transformed our restaurant.',
-    project: 'Restaurant Interior',
-  },
-  {
-    id: 5,
-    name: 'Jennifer Parker',
-    location: 'Local Resident',
-    rating: 5,
-    review: 'Exceptional service from start to finish. The color consultation was incredibly helpful, and the final result is exactly what we wanted. Will definitely use them again!',
-    project: 'Kitchen and Living Room',
-  },
-  {
-    id: 6,
-    name: 'Robert Martinez',
-    location: 'Property Manager',
-    rating: 5,
-    review: 'We\'ve used their services for multiple properties, and they consistently deliver high-quality work. Their team is reliable, professional, and detail-oriented.',
-    project: 'Multi-Unit Property',
+    review: 'We have been using Shane and the team\'s services for over a year now. I am a part of a body corporate and our building has been undergoing frequent renovations. We have had issues with tradespeople in the past so it was a breath of fresh air when we found Shane! He has been on time, highly communicative and professional. Thanks Shane!',
   },
 ];
 
@@ -153,8 +133,7 @@ export default function Reviews() {
                 <p className="text-gray-600 mb-4">{review.review}</p>
                 <div className="border-t pt-4">
                   <p className="font-bold">{review.name}</p>
-                  <p className="text-sm text-gray-500">{review.location}</p>
-                  <p className="text-sm text-primary-600 mt-1">{review.project}</p>
+                  <p className="text-sm text-gray-500">{review.date}</p>
                 </div>
               </motion.div>
             ))}
