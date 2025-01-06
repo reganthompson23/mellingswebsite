@@ -22,7 +22,7 @@ export default function MainLayout({ children }) {
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
               <span className="text-2xl font-display font-bold text-primary-600">
-                PaintPro
+                Mellings
               </span>
             </Link>
 
