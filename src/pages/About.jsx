@@ -53,10 +53,10 @@ export default function About() {
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url('https://media.istockphoto.com/id/1213883647/photo/efficient-renovation-crew-painting-white-walls-of-new-build-home.jpg?s=1024x1024&w=is&k=20&c=YjK90SKh4x0wJX_kdn-9dqMH3Ec7HBo0GwyE2zu_sqM=')`,
+              backgroundImage: `url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop')`,
             }}
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/50 to-black/60" />
         </div>
         <div className="relative container">
           <motion.div
@@ -65,10 +65,10 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h1 className="heading-1 mb-6">
+            <h1 className="heading-1 mb-6 text-white whitespace-nowrap">
               About Mellings
             </h1>
-            <p className="text-xl text-gray-100">
+            <p className="text-xl text-gray-100 font-medium">
               Crafting beautiful spaces with precision and care.
             </p>
           </motion.div>
@@ -106,7 +106,7 @@ export default function About() {
               className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden"
             >
               <img
-                src="https://media.istockphoto.com/id/1394988455/photo/painter-with-protective-gloves-painting-with-paint-roller-white-color-on-the-wall.jpg?s=1024x1024&w=is&k=20&c=q-OS3SBgYx_DPcMZGaLJ_cph-U6-W9QDRUxPcLAaJ0Y="
+                src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=2071&auto=format&fit=crop"
                 alt="Professional painter at work"
                 className="object-cover w-full h-full"
               />
