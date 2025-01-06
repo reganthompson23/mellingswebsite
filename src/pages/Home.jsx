@@ -46,10 +46,18 @@ export default function Home() {
     <div>
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white">
-        {/* Placeholder for background image */}
-        <div className="absolute inset-0 bg-black/50" />
+        {/* Background image */}
+        <div 
+          className="absolute inset-0 bg-black/40" 
+          style={{
+            backgroundImage: `url('https://media.istockphoto.com/id/1221306297/photo/man-pours-paint-into-the-tray-and-dips-roller-professional-interior-construction-worker.jpg?s=1024x1024&w=is&k=20&c=dr5J47iopHLq5-0MDwyE0wxkal8NK-EgCTv_slxwtWk=')`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
         
-        <div className="relative container py-24 sm:py-32">
+        <div className="relative container py-32 sm:py-40">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
