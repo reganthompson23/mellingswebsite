@@ -46,16 +46,24 @@ export default function Home() {
     <div>
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white">
-        {/* Background image */}
-        <div 
-          className="absolute inset-0 bg-black/60" 
-          style={{
-            backgroundImage: `url('https://media.istockphoto.com/id/1221306297/photo/man-pours-paint-into-the-tray-and-dips-roller-professional-interior-construction-worker.jpg?s=1024x1024&w=is&k=20&c=dr5J47iopHLq5-0MDwyE0wxkal8NK-EgCTv_slxwtWk=')`,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-          }}
-        />
+        {/* Background image with multiple overlays */}
+        <div className="absolute inset-0">
+          {/* Base image with initial overlay */}
+          <div 
+            className="absolute inset-0 opacity-75"
+            style={{
+              backgroundImage: `url('https://media.istockphoto.com/id/1221306297/photo/man-pours-paint-into-the-tray-and-dips-roller-professional-interior-construction-worker.jpg?s=1024x1024&w=is&k=20&c=dr5J47iopHLq5-0MDwyE0wxkal8NK-EgCTv_slxwtWk=')`,
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              filter: 'brightness(0.85)',
+            }}
+          />
+          {/* Additional gradient overlay */}
+          <div 
+            className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/40 to-black/50"
+          />
+        </div>
         
         <div className="relative container py-32 sm:py-40">
           <motion.div
@@ -64,10 +72,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h1 className="heading-1 mb-6 text-shadow-sm">
+            <h1 className="heading-1 mb-6 text-shadow">
               Transform Your Space with Professional Painting Services
             </h1>
-            <p className="text-xl mb-8 text-white text-shadow-sm">
+            <p className="text-xl mb-8 text-white text-shadow">
               We bring color to life with expert interior and exterior painting services. 
               Quality workmanship, attention to detail, and customer satisfaction guaranteed.
             </p>
